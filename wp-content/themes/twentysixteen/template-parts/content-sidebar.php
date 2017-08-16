@@ -13,14 +13,12 @@
 
 </div>
 <div class="support">
-    <div class="title_support">Liên hệ tư vấn</div>
-    <img style="margin:10px 0 0 5px;" src="<?php echo get_stylesheet_directory_uri().'/images/hotline12-4.gif'?>" width="256" height="152">
+    <div class="title_support"><i class="icon-phone icons"></i> <span>0911499759</span></div>
 </div>
 <div class="box_right">
     <div class="box_right_top">
         <div class="title_1">Tin tức và sự kiện</div>
-            <a href="page-news.html"><img style="float:left;" 
-            src="<?php echo get_stylesheet_directory_uri().'/images/btn_xemhet_boxright.jpg'?>" width="59" height="32"></a></div>
+            <a href="page-news.html" class="view-all">Xem hết</a></div>
         <div class="content_tintuc">
         <ul>
             <?php
@@ -37,29 +35,7 @@
         </ul>
     </div>     
 </div>
-
-<div class="box_right">
-    <div class="box_right_top">
-        <div class="title_1">Tin Việt kiều</div>
-            <a href="page-news.html"><img style="float:left;" 
-            src="<?php echo get_stylesheet_directory_uri().'/images/btn_xemhet_boxright.jpg'?>" width="59" height="32"></a></div>
-        <div class="content_tintuc">
-        <ul>
-            <?php
-            global $post_news;
-            $args = array( 'posts_per_page' => 5, 'offset'=> 0, 'category_name' => 'ttvk' );
-
-            $myposts = get_posts( $args );
-            foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-                <li>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?><span><?php echo get_the_date('d/m/Y'); ?></span></a> 
-                </li>            
-            <?php endforeach; 
-            wp_reset_postdata();?>      
-        </ul>
-    </div>     
-</div>
- <?php 
+<?php 
     $url = "https://www.vietcombank.com.vn/exchangerates/ExrateXML.aspx";
     $xml = file_get_contents($url);
 
@@ -73,17 +49,16 @@
 <div class="box_right">
     <div class="box_right_top">
         <div class="title_1">Tỷ giá ngoại tệ</div>
-            <a href="page-news.html"><img style="float:left;" 
-            src="<?php echo get_stylesheet_directory_uri().'/images/btn_xemhet_boxright.jpg'?>" width="59" height="32"></a></div>
+    </div>
     <div class="content-tg">
         <table cellspacing="0" cellpadding="0" border="0">
             <tbody>
                 <tr>
-                    <td align="center" width="100%" height="32" class="text_tgvang_mota">Cập nhật lúc: <?php echo $thoi_gian_cap_nhat?><br>
-                      <strong>Đơn vị tính: VNĐ</strong></td>
+                    <td align="center" width="100%" height="32" class="text_tgvang_mota">Cập nhật lúc: <?php echo $thoi_gian_cap_nhat?>
+                      </td>
                 </tr>
                 <tr>
-                    <td align="center" height="18" class="text_tgvang_mota" colspan="4"><strong>Tp. Hồ Chí Minh</strong></td>
+                    <td align="center" height="32" class="text_tgvang_mota" colspan="4"><strong>Đơn vị tính: VNĐ</strong></td>
                 </tr>
             </tbody>
         </table>
@@ -107,19 +82,6 @@
                         <?php endif ?>
                     <?php endforeach; ?>
             </tbody>
-        </table>
-        <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#17a958">
-        <tbody>
-            <tr>
-                <td align="left" width="100%">
-                    <a href="javascript:void(0);">
-                        <img align="absmiddle" width="23" vspace="5" hspace="5" height="20" border="0" alt="Cập nhập giá vàng" 
-                        src="<?php echo get_stylesheet_directory_uri().'/images/btn_refresh.png'?>">
-                    </a>
-                    <span class="text_tgvang_ghichu" style="color:#fff;"></span>Nguồn: Vietcombank.com.vn
-                </td>
-            </tr>
-        </tbody>
         </table>
     </div>
 </div>

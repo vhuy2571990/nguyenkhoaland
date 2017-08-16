@@ -11,9 +11,11 @@
 
 			$myposts = get_posts( $args );
 			foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-				<li>
-					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				<li class="hvr-float-shadow">
+					<a href="<?php the_permalink(); ?>">
+						<?php the_post_thumbnail(); ?>
+						<span class="item-title"><?php the_title(); ?></span>
+					</a>
 				</li>
 			<?php endforeach; 
 			wp_reset_postdata();?>
