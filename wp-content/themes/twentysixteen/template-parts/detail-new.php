@@ -1,28 +1,9 @@
 <div class="title_sub">
-    <h1><a href="page-news.html">Tin tức và sự kiện</a></h1>
-    <span class="padding">|</span>	 
-	<h2><a href="pages-tintuc-12.html">
-	<?php
-	    $categories = get_the_category( $post->ID );
-	    if(!$categories[1]){
-	    	echo $categories[0]->name;
-	    }else {
-	    	echo $categories[1]->name;			
-	    }
-	?>
-	</a></h2>
-</div>
-
-<div class="header-post">
-	<h4><?php the_title(); ?></h4>
-	<small class="text-muted">Ngày đăng: <?php the_date() ?></small> <br>
-	<small class="text-muted">Số lượt đọc: 300</small>
+	<h2><?php the_title(); ?></h2>
 </div>
 <div class="content-post">
-	<?php the_content(); ?>
+		<?php the_content(); ?>
 </div>
-
-
 <div class="duankhac">
 	<p class="title_tintuckhac">Các Tin khác</p>
     <ul>

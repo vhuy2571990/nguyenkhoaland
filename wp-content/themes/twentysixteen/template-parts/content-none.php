@@ -10,7 +10,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'twentysixteen' ); ?></h1>
+		<h1 class="page-title"><?php _e( 'Không tìm thấy kết quả!', 'twentysixteen' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -20,8 +20,8 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'twentysixteen' ); ?></p>
-			<?php get_search_form(); ?>
+			<p><?php _e( 'Xin lỗi, từ khóa không được tìm thấy. Vui lòng thử lại với từ khóa khác.', 'twentysixteen' ); ?></p>
+			<!-- <?php get_search_form(); ?> -->
 
 		<?php else : ?>
 

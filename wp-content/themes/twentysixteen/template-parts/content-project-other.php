@@ -1,7 +1,7 @@
 <div class="box-content">
 	<div class="box-content-top">
 		<div class="title">Dự án tỉnh thành khác</div>	
-		<a href="#" class="view-all">Xem hết</a>
+		<!-- <a href="#" class="view-all">Xem hết</a> -->
 	</div>
 	<div class="box-content-inside">
 		<ul>

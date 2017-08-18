@@ -1,16 +1,16 @@
 <div class="menu_phankhuc">
-        <?php 
+        <!-- <?php 
             if ( in_category('du-an') || is_home() || is_page('land') || is_page('category-du-an')) {
                 get_template_part( 'template-parts/catalog-proj', get_post_format() );
             } elseif ( in_category('tt') ) {
-                get_template_part( 'template-parts/catalog-new', get_post_format() ); 
+                get_template_part( 'template-parts/catalog-bds', get_post_format() ); 
             } else if ( is_page( array( 'gioi-thieu' ))) {
                 get_template_part('template-parts/catalog-page', get_post_format());
             } else if ( is_page('san-giao-dich-bds') || in_category('bds')) {
                 get_template_part('template-parts/catalog-bds', get_post_format());
             }
-        ?>
-
+        ?> -->
+       <?php get_template_part( 'template-parts/catalog-proj', get_post_format() ); ?>
 </div>
 <div class="support">
     <div class="title_support"><i class="icon-phone icons"></i> <span>0911499759</span></div>
