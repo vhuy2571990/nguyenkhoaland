@@ -27,7 +27,7 @@
 	<div class="site-inner" id="wrapper">
 		<header class="header_middle">
 			<div class="logo">
-				<img src="<?php echo get_stylesheet_directory_uri().'/images/logo_HTL2.png' ; ?>" alt="<?php echo get_bloginfo( 'title' ) ; ?>" />
+				<a href="<?php get_site_url();?>"><img src="<?php echo get_stylesheet_directory_uri().'/images/logo_hungthinh.png' ; ?>" alt="<?php echo get_bloginfo( 'title' ) ; ?>" /></a>
 			</div>
 			<div class="menu_wrapper">
 				<div class="bg_menu_main">
