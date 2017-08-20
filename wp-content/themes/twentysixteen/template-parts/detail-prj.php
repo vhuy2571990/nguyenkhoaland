@@ -125,53 +125,20 @@
 				</div>
 			</div>
 	</div>
-<?php endif; ?>
-<!-- <div class="pdl-info-content" id="register">
-	<div class="title_thongtin">Quý khách có nhu cầu tìm hiểu thêm thông tin về sản phẩm, vui lòng cung cấp nội dung theo form bên dưới, chúng tôi sẽ phản hồi trong thời gian sớm nhất. Chân thành cảm ơn Quý khách.</div>
-            <div class="contactform">
-              <form onsubmit="return check_input();" method="post" id="frmContact" name="frmContact" action="" style="padding:0; margin:0;">
-                <ul>
-                  <li class="fieldlabel"><span class="redstar">*</span>Họ tên:</li>
-                  <li class="fieldinput"><span class="redstar"> </span>
-                    <input type="text" class="textfield" id="name" name="name">
-                  </li>
-                  <li class="line"></li>
-                  <li class="fieldlabel"><span class="redstar">*</span>Điện thoại:</li>
-                  <li class="fieldinput"><span class="redstar"> </span>
-                    <input type="text" class="textfield" id="phone" name="phone">
-                  </li>
-                  <li class="line"></li>
-                  <li class="fieldlabel"><span class="redstar">*</span>Email:</li>
-                  <li class="fieldinput"><span class="redstar"> </span>
-                    <input type="text" class="textfield" id="email" name="email">
-                  </li>
-                  <li class="line"></li>
-                  <li class="fieldlabel"><span class="redstar">*</span>Nội dung:</li>
-                  <li class="fieldinput"><span class="redstar"> </span>
-                    <textarea style="height:100px; width:300px;margin-top:15px;" name="content"></textarea>
-                  </li>
-                  <li class="line"></li>
-                  
-                  <li class="fieldinput" style="padding-left:285px;">
-                    <input type="submit" class="btnsubmit" value="Gửi">
-                    <input type="reset" class="btncancel" value="Hủy bỏ">
-                  </li>
-                </ul>
-              </form>
-            </div>
-            <p class="hotline" style="color:#000 !important">Hot line: <br></p><div class="hotline">0934 578 578</div><div class="hotline">0908 90 47 46</div><div class="hotline">0909 306 810</div><div class="hotline">0937 026 026</div><div class="hotline">0914 067 742</div><p></p>           
-</div> -->
-
+<?php endif; ?>
 <div class="duankhac">
-	<p class="title_duankhac">Các dự án khác</p>
+		<?php
+				$related = get_posts( array(
+			 'category__in' => wp_get_post_categories($post->ID),
+			 'numberposts' => 5,
+			 'post__not_in' => array($post->ID) )
+		 );
+		?>
+		<?php if($related):?>
+			<h1 class="title_duankhac">Các dự án khác</h1>
+		<?php endif;?>
     <ul>
-           <?php
-				$related = get_posts( array( 
-					'category__in' => wp_get_post_categories($post->ID), 
-					'numberposts' => 5, 
-					'post__not_in' => array($post->ID) )
-				);
-
+				<?php
 				if( $related ) foreach( $related as $post ) {
 				setup_postdata($post); ?>
 			        <li>

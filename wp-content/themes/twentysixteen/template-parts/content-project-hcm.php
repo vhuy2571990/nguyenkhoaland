@@ -1,7 +1,7 @@
 <div class="box-content">
 	<div class="box-content-top">
 		<div class="title">Dự án tại tphcm</div>	
-		<a href="#" class="view-all">Xem hết</a>
+		<a href="<?php echo get_home_url().'/hcm'?>" class="view-all">Xem hết</a>
 	</div>
 	<div class="box-content-inside">
 		<ul>

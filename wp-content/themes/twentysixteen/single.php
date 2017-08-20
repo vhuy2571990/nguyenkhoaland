@@ -19,9 +19,11 @@ get_header(); ?>
 							get_template_part('template-parts/detail-bds', get_post_format());
 					}else if (in_category('tt')) {
 							get_template_part('template-parts/detail-new', get_post_format());
+					}else {
+						  get_template_part('template-parts/detail-prj', get_post_format());
 					}
 				?>
-			<?php endwhile; endif; ?>	
+			<?php endwhile; endif; ?>
 	</main><!-- .site-main -->
 
 </div><!-- .content-area -->

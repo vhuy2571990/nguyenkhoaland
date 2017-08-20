@@ -19,11 +19,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		<div class="top-bds">
-			<a href="#"><img src="<?php echo get_stylesheet_directory_uri().'/images/bds_dacbiet.jpg' ?>" alt=""></a>
-			<a href="#"><img src="<?php echo get_stylesheet_directory_uri().'/images/bds_giatot.jpg' ?>" alt=""></a>
-			<a href="#"><img src="<?php echo get_stylesheet_directory_uri().'/images/bds_moi.jpg' ?>" alt=""></a>
-		</div>
 		<div class="box-project-main">
 			<?php get_template_part( 'template-parts/content-project-hcm', get_post_format() ); ?>
 		</div>

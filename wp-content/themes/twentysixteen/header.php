@@ -21,13 +21,15 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
+	<link rel="shortcut icon"  type="image/x-icon" href="<?php echo get_stylesheet_directory_uri().'/images/favicon.png' ;?>"/>
+	<link rel="icon"  type="image/x-icon" href="<?php echo get_stylesheet_directory_uri().'/images/favicon.png' ;?>"/>
 </head>
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<div class="site-inner" id="wrapper">
 		<header class="header_middle">
 			<div class="logo">
-				<a href="<?php get_site_url();?>"><img src="<?php echo get_stylesheet_directory_uri().'/images/logo_hungthinh.png' ; ?>" alt="<?php echo get_bloginfo( 'title' ) ; ?>" /></a>
+				<a href="<?php echo get_home_url();?>"><img src="<?php echo get_stylesheet_directory_uri().'/images/logo_hungthinh.png' ;?>" alt="<?php echo get_bloginfo( 'title' ) ; ?>" /></a>
 			</div>
 			<div class="menu_wrapper">
 				<div class="bg_menu_main">

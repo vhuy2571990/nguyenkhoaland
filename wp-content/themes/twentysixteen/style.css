@@ -4,7 +4,10 @@
 	font-family: 'Noto Serif', sans-serif, serif;
 	font-size: 1rem;
 }
-
+img {
+	max-width: 100%;
+	height: auto;
+}
 a, a:hover, a:focus, a:active {
 	color: #333;
 	text-decoration: none;
@@ -30,7 +33,11 @@ iframe {
    max-width: 100%;
    height: 400px;
 }
-
+
+.entry-title-search {
+	margin-bottom: 20px;
+}
+
 #wrapper{
     max-width: 990px;
     margin: 0 auto;
@@ -70,7 +77,6 @@ li.menu-item.current-menu-item a:before {
 .header_middle .menu_wrapper {
     float: right;
     margin-top: 42px;
-    height: 45px;
 }
 
 .bg_menu_repeart .lavalamp li {
@@ -117,7 +123,6 @@ li.menu-item.current-menu-item a:before {
 }
 
 #footer .container {
-    width: 984px;
     margin: 0 auto;
 }
 
@@ -163,7 +168,7 @@ li.menu-item.current-menu-item a:before {
 
 #primary {
     display: inline-block;
-    width: 700px;
+    width: calc(100% - 300px);
     float: left;
 }
 
@@ -192,13 +197,9 @@ li.menu-item.current-menu-item a:before {
     clear: both;
 }
 
-.box-content-top {
-    width: 700px;
-    float: left;
-}
-
+
 .box-content .title {
-    width: 617px;
+    width: 50%;
     text-transform: uppercase;
     font-weight: 400;
 		font-size: 18px;
@@ -210,22 +211,22 @@ li.menu-item.current-menu-item a:before {
 .box-content-top .view-all {
 		display: inline-block;
 		vertical-align: middle;
-    width: calc(100% - 622px);
+    width: calc(50% - 5px);
     text-align: right;
 		color: grey;
 }
-
-.box-content-inside {
-	  clear: both;
-    width: 698px;
-    float: left;
-}
 
 .box-content-inside ul {
     margin: 0;
 		padding: 0;
 }
-
+
+.box-content-inside ul::after {
+		content: '';
+		clear: both;
+		display: block;
+}
+
 .box-content-inside ul li {
     list-style: none;
     width: calc(100%/3 - 21px);
@@ -233,6 +234,7 @@ li.menu-item.current-menu-item a:before {
 		padding: 5px;
     text-align: center;
 		min-height: 260px;
+		max-height: 200px;
 		border: 1px solid #d1d1d1;
 		border-radius: 3px;
 		margin: 5px;
@@ -246,6 +248,7 @@ li.menu-item.current-menu-item a:before {
     margin-bottom: 5px;
     width: 204px !important;
     height: 140px !important;
+		max-width: 100%;
 }
 
 .box-content-inside ul li a {
@@ -293,8 +296,8 @@ li.menu-item.current-menu-item a:before {
 }
 
 .menu_phankhuc {
-    width: 264px;
-    border: 2px dashed #1dabab;
+    width: calc(100% - 4px);
+    border: 2px solid #1dabab;
     float: left;
     margin-top: 20px;
     background: #fff;
@@ -318,8 +321,8 @@ li.menu-item.current-menu-item a:before {
 }
 
 .support {
-    width: 264px;
-    border: 2px dashed #1dabab;
+    width: calc(100% - 4px);
+    border: 2px solid #1dabab;
     float: left;
     margin-top: 20px;
     background: #fff;
@@ -438,8 +441,8 @@ li.menu-item.current-menu-item a:before {
     border-bottom: 1px dashed #999;
     float: left;
     padding-bottom: 5px;
-    width: 700px;
     margin-bottom: 20px;
+		width: 100%;
 }
 
 .title_sub h2 {
@@ -457,7 +460,16 @@ h1 a {
     float: left;
     text-decoration: none;
 }
-
+
+h1.entry-title-search a {
+	float: none;
+}
+
+.search-results .page-title{
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
 #content h2 a,
 .entry-header h2,
 .entry-header span {
@@ -560,7 +572,7 @@ div.tabscontainer div.curvedContainer {
     min-height: 370px;
     -moz-border-radius: 13px;
     border-radius: 13px;
-    width: 605px;
+    width: calc(100% - 100px);
 }
 
 div.tabscontainer div.curvedContainer .tabcontent {
@@ -696,6 +708,7 @@ div.tabscontainer {
     font-weight: 700;
     text-transform: uppercase;
     width: 100%;
+		margin-bottom: 20px;
 }
 
 .duankhac ul li {
@@ -1022,14 +1035,24 @@ ul.utis li {
     border-bottom: 1px dashed #999;
     padding-bottom: 15px;
     padding-top: 15px;
-    float: left;
 }
-
+.pagination {
+	text-align: right;
+	clear: both;
+	display: block;
+}
+.pagination a {
+	padding: 5px 10px;
+	background: #e8e8e8;
+}
+.pagination a:hover{
+	background: green;
+	color: #fff;
+}
 .menu_tintuc ul li a {
-    font-size: 14px;
     color: #0b9b47;
     text-decoration: none;
-    font-weight: normal;
+    font-weight: 700;
 }
 
 .menu_tintuc ul li .thumbnail img {
@@ -1152,4 +1175,67 @@ ul.utis li {
     background: #ff4800;
     border-color: #ff4800;
     color: white;
+}
+
+@media only screen and (max-width: 768px) {
+		#secondary {
+			display: none;
+		}
+		#primary,
+		.box-content-top,
+		.box-content-inside {
+			display: block;
+			float: none;
+			width: 100%;
+		}
+		.box-content .title {
+			padding-left: 10px;
+			width: 50%;
+		}
+		#primary {
+			margin: 0;
+		}
+		#footer .container {
+			width: 100%;
+		}
+		.menu,
+		.header_middle .menu_wrapper {
+			float: none;
+			display: block;
+			margin-top: 20px;
+			text-align: center;
+		}
+		.header_middle .logo {
+			display: block;
+			float: none;
+		}
+		.header_middle .logo a {
+			display: block;
+			margin: 0 auto;
+			max-width: 150px;
+		}
+		.box-content-inside ul li img {
+			max-width: 100%;
+			height: auto;
+		}
+		.box-content-top .view-all {
+			width: calc(50% - 20px);
+		}
+		#menu-primary-menu::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+}
+
+@media only screen and (max-width: 468px) {
+	.box-content-inside ul li {
+		width: calc(50% - 25px);
+		float: none;
+		display: inline-block;
+	}
+	.box-content-inside ul li .item-title{
+		display: block;
+		clear: both;
+	}
 }
